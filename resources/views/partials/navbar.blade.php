@@ -36,27 +36,6 @@
                 <li class="menu-item">
                     <a href={{ route('contact') }}>CONTACT US</a>
                 </li>
-                {{-- <li class="menu-item dropdown">
-                    <a href="#">ELEMENTS</a>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                            <a href="style-guide.html">Style Guide</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="buttons.html">Buttons</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="icons.html">Icons</a>
-                        </li>
-                    </ul>
-                </li> --}}
-
-
-                {{-- <li class="menu-item menu-btn">
-                    <a href="booking-form.html" class="btn">
-                        <i class="fa fa-user"></i>
-                        LOG IN</a>
-                </li> --}}
 
                 <li class="menu-item menu-btn">
                     @if (Route::has('login'))
@@ -71,32 +50,9 @@
                         @endauth
                     @endif
                 </li>
-
-                {{-- <p>
-                    @if (Route::has('login'))
-                        @auth
-                            <li>
-
-                                <a href="{{ url('/dashboard') }}"
-                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                            </li>
-                        @else
-                            <li>
-
-                                <a href="{{ route('login') }}"
-                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                            </li>
-
-                            @if (Route::has('register'))
-                                <li>
-                                    <a href="{{ route('register') }}"
-                                        class=" text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                </li>
-                            @endif
-                        @endauth
-                    @endif
-                </p> --}}
             </ul>
         </nav>
     </div>
 </header>
+
+
