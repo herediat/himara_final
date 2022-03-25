@@ -34,6 +34,6 @@ class ContactSender extends Mailable implements ShouldQueue
     {
         // return $this->markdown('mail.contact');
         // return $this->to($this->data->mail)->markdown('mail.box')->subject($this->data->subject);
-        return $this->subject('Mail from Hilal')->from('hilmolengeek@gmail.com', 'hilal koujil')->markdown('pages.mailtest');
+        return $this->subject('Mail from Heredia')->from('herediatshishimbi08@gmail.com', 'Tshishimbi Heredia')->markdown('pages.mailtest');
     }
 }

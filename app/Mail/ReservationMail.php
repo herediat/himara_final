@@ -28,6 +28,6 @@ class ReservationMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->from('hilmolengeek@gmail.com', 'hilal koujil')->markdown('mail.reservation')->with(['reservation' => $this->data]);
+        return $this->from('herediatshishimbi08@gmail.com', 'Tshishimbi Heredia')->markdown('mail.reservation')->with(['reservation' => $this->data]);
     }
 }
