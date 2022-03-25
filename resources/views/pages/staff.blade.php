@@ -57,7 +57,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="staff-item">
                             <figure>
-                                <img src={{ asset("images/". $houseKeeper->img) }} class="img-fluid" alt="Image">
+                                <img src={{ asset("/storage/images/". $houseKeeper->img) }} class="img-fluid" alt="Image">
                                 <div class="position">{{ $houseKeeper->fonction->fonction }}</div>
                             </figure>
                             <div class="details">
