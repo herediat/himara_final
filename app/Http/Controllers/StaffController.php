@@ -57,26 +57,37 @@ class StaffController extends Controller
         $store->fonction_id = $request->fonction_id;
 
         $store->save();
-        return  redirect()->back()->with('success', $request->fullname . ' bien ajouté !');
+
+        if ($request->fonction_id == 1) {
+            $housekeeper = Team::where('fonction_id', 1)->where('id', '!=', $store->id)->first();
+            $housekeeper->fonction_id = Fonction::inRandomOrder()->where('id', '!=', 1)->first()->id;
+            $housekeeper->save();
+        }
+        return  redirect()->route("team.index")->with('success', $request->fullname . ' bien ajouté !');
     }
 
     public function destroy(Team $image, $id)
     {
         $image = Team::find($id);
-        // $this->authorize("isAdmin");
-        // Storage
-        $destination = "images/" . $image->img;
-        // dd($destination);
-        Storage::disk("public")->delete($destination);
-        // dd($destination);
-        $image->delete();
-        return redirect()->back()->with('warning', 'Image bien supprimé');
+        if ($image->fonction_id != 1) {
+
+            // $this->authorize("isAdmin");
+            // Storage
+            $destination = "images/" . $image->img;
+            // dd($destination);
+            Storage::disk("public")->delete($destination);
+            // dd($destination);
+            $image->delete();
+        }
+        return redirect()->back()->with('warning', 'membre(team) bien supprimé');
     }
 
     public function edit(Team $teams)
     {
         // $teams = Team::all();
-        return view("admin.staff.edit", compact("teams"));
+        $fonctionAll = Fonction::all();
+
+        return view("admin.staff.edit", compact("teams", "fonctionAll"));
     }
 
     public function update(Request $request, Team $teams)
@@ -103,7 +114,18 @@ class StaffController extends Controller
 
         $teams->fullname = $request->fullname;
         $teams->description = $request->description;
+        if ($teams->fonction_id != 1) {
+
+            $tempFonction = $teams->fonction_id;
+            $teams->fonction_id = $request->fonction_id;
+        }
+
         $teams->save();
-        return redirect()->route('team.index')->with('success', 'categorie ' . $request->nom . ' modifiée !');
+        if ($request->fonction_id == 1) {
+            $housekeeper = Team::where('fonction_id', 1)->where('id', '!=', $teams->id)->first();
+            $housekeeper->fonction_id = $tempFonction;
+            $housekeeper->save();
+        }
+        return redirect()->route('team.index')->with('success', 'staff ' . $request->fullname . ' modifiée !');
     }
 }

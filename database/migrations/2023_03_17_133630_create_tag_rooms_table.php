@@ -21,7 +21,7 @@ class CreateTagRoomsTable extends Migration
 
             // // FK
             $table->unsignedBigInteger('room_id');
-            $table->foreign('room_id')->references('id')->on("rooms")->onDelete("cascade");
+            $table->foreign('room_id')->references('id')->on("rooms")->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

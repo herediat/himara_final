@@ -23,8 +23,8 @@ class CreateRoomsTable extends Migration
             $table->integer("personMax");
              // fk
             $table->unsignedBigInteger('category_room_id');
-            $table->foreign('category_room_id')->references('id')->on("category_rooms");
-
+            $table->foreign('category_room_id')->references('id')->on("category_rooms")
+            ->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
