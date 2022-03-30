@@ -56,21 +56,25 @@ class ContactController extends Controller
             'mail' => 'required',
             'telephone' => 'required',
             'fax' => 'required',
-            'message' => 'required',
+            'site' => 'required',
         ]);
+      
 
+       
         $infos->adresse = $request->adresse;
         $infos->mail = $request->mail;
         $infos->telephone = $request->telephone;
         $infos->fax = $request->fax;
-        $infos->message = $request->message;
+        $infos->site = $request->site;
         $infos->save();
-        return redirect()->route('contacts.index')->with('success', 'contacts ' . $request->adresse . ' modifiée !');
+        return redirect()->route('contact.index')->with('success', 'contact ' . $request->adresse . ' modifiée !');
     }
 
     public function affichage()
     {
-        $info = Info::first();
+        // $info = Info::first();
+        $info = Info::latest()->first();
+        // $info = Info::orderBy('id', 'desc')->take(1)->get();
         return view("admin.contact.index", compact("info"));
     }
 

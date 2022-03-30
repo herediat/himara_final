@@ -70,7 +70,7 @@
                                 {{-- <div id="map-canvas"></div> --}}
                                 <iframe class="rounded-circle" width='100%' height='340' frameborder='0' scrolling='no' marginheight='0'
                                     marginwidth='0'
-                                    src='https://maps.google.com/maps?&amp;q="{{ $infos->adresse }}"&amp;output=embed'></iframe>
+                                    src='https://maps.google.com/maps?&amp;q="{{ $info->adresse }}"&amp;output=embed'></iframe>
                             </div>
 
                             <div class="contact-details mt75">
@@ -79,23 +79,23 @@
 
                                         <li>
                                             <a href="#">
-                                                <i class="fa fa-map-marker"></i>{{ $infos->adresse }}</a>
+                                                <i class="fa fa-map-marker"></i>{{ $info->adresse }}</a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="fa fa-envelope"></i>{{ $infos->mail }}</a>
+                                                <i class="fa fa-envelope"></i>{{ $info->mail }}</a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="fa fa-phone"></i>{{ $infos->telephone }}</a>
+                                                <i class="fa fa-phone"></i>{{ $info->telephone }}</a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="fa fa-fax"></i>{{ $infos->fax }}</a>
+                                                <i class="fa fa-fax"></i>{{ $info->fax }}</a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="fa fa-globe"></i>{{ $infos->site }}</a>
+                                                <i class="fa fa-globe"></i>{{ $info->site }}</a>
                                         </li>
                                     </ul>
                                 </div>
