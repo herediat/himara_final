@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
                 "email" => "nico@test.com",
                 "role_id" => 3,
                 'profil' => 'images/users/admin.jpg',
-                "password" => Hash::make("hilal"),
+                "password" => Hash::make("nico"),
                 "created_at" => now()
             ],
         ]);
