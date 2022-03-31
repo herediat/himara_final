@@ -8,65 +8,7 @@
     @include('partials.topbar')
 
     @include('partials.navbar')
-    {{-- <!-- ========== HEADER ========== -->
-    <header class="horizontal-header sticky-header" data-menutoggle="991">
-        <div class="container">
-            <!-- BRAND -->
-            <div class="brand">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src={{ asset('images/logo.svg') }} alt="Hotel Himara">
-                    </a>
-                </div>
-            </div>
-            <!-- MOBILE MENU BUTTON -->
-            <div id="toggle-menu-button" class="toggle-menu-button">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-            <!-- MAIN MENU -->
-            <nav id="main-menu" class="main-menu">
-                <ul class="menu">
-                    <li class="menu-item dropdown active">
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li class="menu-item dropdown">
-                        <a href="rooms-list.html">ROOMS</a>
-                    </li>
-                    <li class="menu-item dropdown">
-                        <a href="staff.html">TEAM</a>
-                    </li>
-                    <li class="menu-item dropdown">
-                        <a href="gallery.html">GALLERY</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="contact.html">CONTACT US</a>
-                    </li>
-                    <li class="menu-item dropdown">
-                        <a href="#">ELEMENTS</a>
-                        <ul class="submenu">
-                            <li class="menu-item">
-                                <a href="style-guide.html">Style Guide</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="icons.html">Icons</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item menu-btn">
-                        <a href="booking-form.html" class="btn">
-                            <i class="fa fa-user"></i>
-                            LOG IN</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header> --}}
-    <!-- ========== REVOLUTION SLIDER ========== -->
+
     <div class="slider">
         <div id="rev-slider-1" class="rev_slider gradient-slider" style="display:none" data-version="5.4.5">
             <ul>
@@ -418,67 +360,7 @@
                     </div>
                 </div>
                 @endforeach
-                {{-- <!-- ITEM -->
-                <div class="col-md-4">
-                    <div class="room-grid-item">
-                        <figure class="gradient-overlay-hover link-icon">
-                            <a href="room.html">
-                                <img src={{ asset('images/rooms/double/double.jpg') }} class="img-fluid"
-                                    alt="Image">
-                            </a>
-                            <div class="room-services">
-                                <i class="fa fa-coffee" aria-hidden="true" data-toggle="popover"
-                                    data-placement="right" data-trigger="hover" data-content="Breakfast Included"
-                                    data-original-title="Breakfast"></i>
-                                <i class="fa fa-wifi" aria-hidden="true" data-toggle="popover"
-                                    data-placement="right" data-trigger="hover" data-content="Free WiFi"
-                                    data-original-title="WiFi"></i>
-                                <i class="fa fa-television" data-toggle="popover" data-placement="right"
-                                    data-trigger="hover" data-content="Plasma TV with cable channels"
-                                    data-original-title="TV"></i>
-                            </div>
-                            <div class="room-price">€129 / night</div>
-                        </figure>
-                        <div class="room-info">
-                            <h2 class="room-title">
-                                <a href="room.html">Double Room</a>
-                            </h2>
-                            <p>Enjoy our double room</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- ITEM -->
-                <div class="col-md-4">
-                    <div class="room-grid-item">
-                        <figure class="gradient-overlay-hover link-icon">
-                            <a href="room.html">
-                                <img src={{ asset('images/rooms/deluxe/deluxe.jpg') }} class="img-fluid"
-                                    alt="Image">
-                            </a>
-                            <div class="room-services">
-                                <i class="fa fa-coffee" aria-hidden="true" data-toggle="popover"
-                                    data-placement="right" data-trigger="hover" data-content="Breakfast Included"
-                                    data-original-title="Breakfast"></i>
-                                <i class="fa fa-bath" data-toggle="popover" data-placement="right"
-                                    data-trigger="hover" data-content="2 Bathrooms"
-                                    data-original-title="Bathroom"></i>
-                                <i class="fa fa-wifi" aria-hidden="true" data-toggle="popover"
-                                    data-placement="right" data-trigger="hover" data-content="Free WiFi"
-                                    data-original-title="WiFi"></i>
-                                <i class="fa fa-television" data-toggle="popover" data-placement="right"
-                                    data-trigger="hover" data-content="Plasma TV with cable channels"
-                                    data-original-title="TV"></i>
-                            </div>
-                            <div class="room-price">€189 / night</div>
-                        </figure>
-                        <div class="room-info">
-                            <h2 class="room-title">
-                                <a href="room.html">Deluxe Room</a>
-                            </h2>
-                            <p>Enjoy our delux room</p>
-                        </div>
-                    </div>
-                </div> --}}
+              
             </div>
         </div>
     </section>
@@ -501,15 +383,6 @@
                                 <h4>{{ $item->titre }}</h4>
                             </figcaption>
                         </figure>
-
-                        {{-- @if ($loop->iteration ==2)
-                        <figure class="gradient-overlay">
-                            <img src={{ asset('images/services/spa.jpg') }} class="img-fluid" alt="Image">
-                            <figcaption>
-                                <h4>{{ Str::limit($item->titre, 3 )}}</h4>
-                            </figcaption>
-                        </figure>
-                        @endif --}}
 
                         @endforeach
                     </div>
@@ -554,10 +427,10 @@
 
                     <figure class="gradient-overlay image-icon">
                         <a href= "{{ asset('/storage/images/'. $image->url) }}">
-                            {{-- <a href={{ asset('images/gallery/gallery1.jpg') }}> --}}
+                            
 
                             <img src="{{ asset('/storage/images/'. $image->url) }}" alt="Image">
-                            {{-- <img src={{ asset('images/gallery/gallery1.jpg') }} alt="Image"> --}}
+                            
                         </a>
                         <figcaption>{{ $image->nom }} test</figcaption>
                     </figure>
@@ -709,78 +582,11 @@
                 </div>
 
                 @endforeach
-                {{-- <!-- ITEM -->
-                <div class="col-md-4">
-                    <div class="news-grid-item">
-                        <figure class="gradient-overlay-hover link-icon">
-                            <a href="blog-post.html">
-                                <img src={{ asset('images/blog/blog-post2.jpg') }} class="img-fluid"
-                                    alt="Image">
-                            </a>
-                        </figure>
-                        <div class="news-info">
-                            <h4 class="title">
-                                <a href="blog-post.html">Enjoy your holidays</a>
-                            </h4>
-                            <p>An examination of how the current political and economical climate is affecting the
-                                mental healthcare
-                                industry...</p>
-                            <div class="post-meta">
-                                <span class="author">
-                                    <a href="#"><img src={{ asset('images/users/admin.jpg') }} width="16"
-                                            alt="Image">
-                                        JANE</a>
-                                </span>
-                                <span class="date">
-                                    <i class="fa fa-clock-o"></i>
-                                    August 16, 2017</span>
-                                <span class="comments">
-                                    <a href="#">
-                                        <i class="fa fa-commenting-o"></i>
-                                        5 Comments</a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ITEM -->
-                <div class="col-md-4">
-                    <div class="news-grid-item">
-                        <figure class="gradient-overlay-hover link-icon">
-                            <a href="blog-post.html">
-                                <img src={{ asset('images/blog/blog-post3.jpg') }} class="img-fluid"
-                                    alt="Image">
-                            </a>
-                        </figure>
-                        <div class="news-info">
-                            <h4 class="title">
-                                <a href="blog-post.html">Honeymoon at Hotel Himara</a>
-                            </h4>
-                            <p>An examination of how the current political and economical climate is affecting the
-                                mental healthcare
-                                industry...</p>
-                            <div class="post-meta">
-                                <span class="author">
-                                    <a href="#"><img src={{ asset('images/users/admin.jpg') }} width="16"
-                                            alt="Image">
-                                        JANE</a>
-                                </span>
-                                <span class="date">
-                                    <i class="fa fa-clock-o"></i>
-                                    January 11, 2018</span>
-                                <span class="comments">
-                                    <a href="#">
-                                        <i class="fa fa-commenting-o"></i>
-                                        3 Comments</a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+               
             </div>
         </div>
     </section>
-    {{-- <!-- ========== VIDEO ========== -->{{ asset('images/video.jpg') }} --}}
+    
     <section class="video np parallax gradient-overlay op6"
         data-src={{ asset('images/video.jpg') }} data-parallax="scroll" data-speed="0.3"
         data-mirror-selector=".wrapper" data-z-index="0">
@@ -858,163 +664,9 @@
     </section>
 
     @include('partials.footer')
-    {{-- <!-- ========== FOOTER ========== -->
-    <footer>
-        <div class="footer-widgets">
-            <div class="container">
-                <div class="row">
-                    <!-- WIDGET -->
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <img src={{ asset('images/logo.svg') }} class="footer-logo" alt="Hotel Himara">
-                            <div class="inner">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, velit placeat
-                                    assumenda incidunt
-                                    dolorem aliquam!</p>
-                                <a href={{ asset('https://www.tripadvisor.com/') }} target="_blank">
-                                    <div class="tripadvisor-banner">
-                                        <span class="review">Recommended</span>
-                                        <img src={{ asset('images/icons/tripadvisor.png') }} alt="Image">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- WIDGET -->
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h3>LATEST NEWS</h3>
-                            <div class="inner">
-                                <ul class="latest-posts">
-                                    <li>
-                                        <a href="blog-post.html">10 Tips for holiday travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-post.html">Are you ready to enjoy your holidays</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-post.html">Honeymoon at Hotel Himara</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-post.html">Travel gift ideas for every type of traveler</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-post.html">Breakfast with coffee and orange juice</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- WIDGET -->
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h3>USEFUL LINKS</h3>
-                            <div class="inner">
-                                <ul class="useful-links">
-                                    <li>
-                                        <a href="about-us.html">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">Shop</a>
-                                    </li>
-                                    <li>
-                                        <a href="gallery.html">Himara Gallery</a>
-                                    </li>
-                                    <li>
-                                        <a href="location.html">Our Location</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- WIDGET -->
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h3>Contact Info</h3>
-                            <div class="inner">
-                                <ul class="contact-details">
-                                    <li>
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        Lorem ipsum dolor, 25, Himara
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                        Phone: +1 888 123 4567
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-fax"></i>
-                                        Fax: +1 888 123 4567
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-globe"></i>
-                                        Web: www.hotelhimara.com
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-envelope"></i>
-                                        Email:
-                                        <a href="mailto:info@site.com">contact@hotelhimara.com</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- SUBFOOTER -->
-        <div class="subfooter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="copyrights">&copy; 2018 Hotel Himara. Designed by
-                            <a href={{ asset('https://eagle-themes.com/') }} target="_blank">Eagle-Themes</a>.
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="social-media">
-                            <a class="facebook" data-original-title="Facebook" data-toggle="tooltip"
-                                href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a class="twitter" data-original-title="Twitter" data-toggle="tooltip" href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="googleplus" data-original-title="Google Plus" data-toggle="tooltip"
-                                href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a class="pinterest" data-original-title="Pinterest" data-toggle="tooltip"
-                                href="#">
-                                <i class="fa fa-pinterest"></i>
-                            </a>
-                            <a class="linkedin" data-original-title="Linkedin" data-toggle="tooltip"
-                                href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a class="youtube" data-original-title="Youtube" data-toggle="tooltip" href="#">
-                                <i class="fa fa-youtube"></i>
-                            </a>
-                            <a class="instagram" data-original-title="Instagram" data-toggle="tooltip"
-                                href="#">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> --}}
+   
 </div>
 @include('partials.contactNotif')
 
-{{-- <!-- ========== CONTACT NOTIFICATION ========== -->
-<div id="contact-notification" class="notification fixed"></div> --}}
-<!-- ========== BACK TO TOP ========== -->
-{{-- <div class="back-to-top">
-    <i class="fa fa-angle-up" aria-hidden="true"></i>
-</div> --}}
 
 @endsection

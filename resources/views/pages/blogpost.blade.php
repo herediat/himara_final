@@ -162,16 +162,12 @@
                                                 <h4 class="author-name">
                                                     <a href="#">{{ $item->name }}</a>
                                                 </h4>
-                                                {{-- <a href="#comment-form" class="reply_link">Reply</a> --}}
-
-                                                {{-- <a href="#comment-form" class="reply_link">Delete</a> --}}
 
                                                 <td>
                                                     <form action="/comments/{{$item->id}}/delete" method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button style="" type="submit" class="reply_link btn text-danger">Delete</button>
-                                                        {{-- <button class="btn btn-xs btn-dark btn-rounded" type="submit">DELETE</button> --}}
                                                     </form>
                                                 </td>
 
@@ -188,89 +184,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <ul class="comments-list reply-list">
-                                        <li>
-                                            <div class="comment-avatar"><img src={{ asset("images/blog/users/user2.jpg") }} alt="">
-                                            </div>
-                                            <div class="comment-box">
-                                                <div class="comment_content">
-                                                    <h4 class="author-name">
-                                                        <a href="#">
-                                                            Ina Aldrich</a>
-                                                    </h4>
-                                                    <a href="#comment-form" class="reply_link">Edit</a>
-                                                    <span class="comment_info">
-                                                        <i class="fa fa-clock-o"></i>
-                                                        <a href="#">
-                                                            <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017
-                                                                at 7:56 pm</time>
-                                                        </a>
-                                                    </span>
-                                                    <div class="comment_said_text">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                                            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                                            aliquam erat volutpat, euismod tincidunt ut laoreet dolore
-                                                            magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="comment-avatar">
-                                                <img src={{ asset("images/blog/users/user3.jpg") }} alt="">
-                                            </div>
-                                            <div class="comment-box">
-                                                <div class="comment_content">
-                                                    <h4 class="author-name">
-                                                        <a href="#">William Whiten</a>
-                                                    </h4>
-                                                    <a href="#comment-form" class="reply_link">Reply</a>
-                                                    <span class="comment_info">
-                                                        <i class="fa fa-clock-o"></i>
-                                                        <a href="#">
-                                                            <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017
-                                                                at 7:56 pm</time>
-                                                        </a>
-                                                    </span>
-                                                    <div class="comment_said_text">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                                            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                                            aliquam erat volutpat.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul> --}}
+                                   
                                 </li>
                                 @endif
                                 @endforeach
-                                {{-- <li>
-                                    <div class="comment-main-level">
-                                        <div class="comment-avatar">
-                                            <img src={{ asset("images/blog/users/user4.jpg") }} alt="">
-                                        </div>
-                                        <div class="comment-box">
-                                            <div class="comment_content">
-                                                <h4 class="author-name">
-                                                    <a href="#">Amy Ellison</a>
-                                                </h4>
-                                                <a href="#comment-form" class="reply_link">Reply</a>
-                                                <span class="comment_info">
-                                                    <i class="fa fa-clock-o"></i>
-                                                    <a href="#">
-                                                        <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017 at
-                                                            7:56 pm</time>
-                                                    </a>
-                                                </span>
-                                                <div class="comment_said_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                                        aliquam erat volutpat.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li> --}}
                             </ul>
                             <div class="section-title mt100">
                                 <h4>LEAVE YOUR COMMENT</h4>
@@ -305,171 +222,6 @@
                         </div>
                     </div>
 
-                    {{-- <div class="col-lg-3 col-12">
-                        <div class="sidebar">
-                            <aside class="widget noborder">
-                                <div class="search">
-                                    <form class="widget-search">
-                                        <input type="search" placeholder="Search">
-                                        <button class="btn-search" id="searchsubmit" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </aside>
-                            <aside class="widget">
-                                <h4 class="widget-title">CATEGORIES</h4>
-                                <ul class="categories">
-                                    <li>
-                                        <a href="#">Travel<span class="posts-num">51</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Rooms<span class="posts-num">24</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Holidays
-                                            <span class="posts-num">9</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Travel<span class="posts-num">12</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Events<span class="posts-num">28</span></a>
-                                    </li>
-                                </ul>
-                            </aside>
-
-                            <aside class="widget">
-                                <h4 class="widget-title">Latest Posts</h4>
-                                <div class="latest-posts">
-
-                                    <div class="latest-post-item">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <figure class="gradient-overlay-hover link-icon sm">
-                                                    <a href="blog-post.html">
-                                                        <img src={{ asset("images/blog/blog-post1.jpg") }} class="img-fluid"
-                                                            alt="Image">
-                                                    </a>
-                                                </figure>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="post-details">
-                                                    <h6 class="post-title">
-                                                        <a href="blog-post.html">10 Tips for Holiday Travel</a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="latest-post-item">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <figure class="gradient-overlay-hover link-icon sm">
-                                                    <a href="blog-post.html">
-                                                        <img src={{ asset("images/blog/blog-post2.jpg") }} class="img-fluid"
-                                                            alt="Image">
-                                                    </a>
-                                                </figure>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="post-details">
-                                                    <h6 class="post-title">
-                                                        <a href="blog-post.html">Are you ready to enjoy your
-                                                            holidays</a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="latest-post-item">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <figure class="gradient-overlay-hover link-icon sm">
-                                                    <a href="blog-post.html">
-                                                        <img src={{ asset("images/blog/blog-post3.jpg") }} class="img-fluid"
-                                                            alt="Image">
-                                                    </a>
-                                                </figure>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="post-details">
-                                                    <h6 class="post-title">
-                                                        <a href="blog-post.html">Honeymoon in Hotel Himara</a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="latest-post-item">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <figure class="gradient-overlay-hover link-icon sm">
-                                                    <a href="blog-post.html">
-                                                        <img src={{ asset("images/blog/blog-post4.jpg") }} class="img-fluid"
-                                                            alt="Image">
-                                                    </a>
-                                                </figure>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="post-details">
-                                                    <h6 class="post-title">
-                                                        <a href="blog-post.html">Travel Gift Ideas for Every Type of
-                                                            Traveler</a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="latest-post-item">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <figure class="gradient-overlay-hover link-icon sm">
-                                                    <a href="blog-post.html">
-                                                        <img src={{ asset("images/blog/blog-post5.jpg") }} class="img-fluid"
-                                                            alt="Image">
-                                                    </a>
-                                                </figure>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="post-details">
-                                                    <h6 class="post-title">
-                                                        <a href="blog-post.html">Breakfast with coffee and orange
-                                                            juic</a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="widget">
-                                <h4 class="widget-title">Tags</h4>
-                                <div class="tagcloud">
-                                    <a href="#">
-                                        <span class="tag">Party</span></a>
-                                    <a href="#">
-                                        <span class="tag">Travel</span></a>
-                                    <a href="#">
-                                        <span class="tag">Wedding</span></a>
-                                    <a href="#">
-                                        <span class="tag">Food</span></a>
-                                    <a href="#">
-                                        <span class="tag">Music</span></a>
-                                    <a href="#">
-                                        <span class="tag">City</span></a>
-                                    <a href="#">
-                                        <span class="tag">Image</span></a>
-                                    <a href="#">
-                                        <span class="tag">Hotel</span></a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </main>
